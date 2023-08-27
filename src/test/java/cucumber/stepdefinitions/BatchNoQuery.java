@@ -32,6 +32,7 @@ public class BatchNoQuery {
   @Before
   public void setup(){
     driver = new ChromeDriver();
+    driver.manage().window().maximize();
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }

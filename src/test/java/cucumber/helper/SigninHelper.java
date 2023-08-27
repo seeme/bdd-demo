@@ -15,7 +15,6 @@ import static org.junit.Assert.assertThat;
 public class SigninHelper {
 
   private static final String SIGNIN_PAGE_URL = "http://140.134.24.157:20083/signin.html";
-
   private static final String MAIN_PAGE_URL = "http://140.134.24.157:20083/main.html";
 
   public static void landSignInPage(WebDriver webDriver) {

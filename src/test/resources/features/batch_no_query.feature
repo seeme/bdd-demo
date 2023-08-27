@@ -1,4 +1,4 @@
-Feature:
+Feature: 批號查詢
   作為使用者且成功登入後
   我想要執行批號查詢
   以便能夠查看批號相關內容
@@ -7,7 +7,6 @@ Feature:
     Given 我已經成功登入
       | username | password     |
       | sammy | 1234 |
-
 
   Scenario Outline: 有效的批號查詢
     Given 我在批號查詢頁面

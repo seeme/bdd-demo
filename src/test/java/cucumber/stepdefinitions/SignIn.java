@@ -28,6 +28,7 @@ public class SignIn {
   @Before
   public void setup(){
     driver = new ChromeDriver();
+    driver.manage().window().maximize();
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
