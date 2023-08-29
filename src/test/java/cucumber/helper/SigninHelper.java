@@ -8,9 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SigninHelper {
 
@@ -43,7 +41,7 @@ public class SigninHelper {
 
   public static void verifyManuExist(WebDriver webDriver) {
     WebElement elm = webDriver.findElement(By.id("navbarDropdownMenuLink"));
-    assertThat(webDriver.findElement(By.id("navbarDropdownMenuLink")).getText(), is("初級市場"));
+    assertEquals(webDriver.findElement(By.id("navbarDropdownMenuLink")).getText(), "初級市場");
   }
 
 }
