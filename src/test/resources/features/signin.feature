@@ -7,7 +7,7 @@ Feature: 使用者登入
     Given 我在登入頁面
     When 我輸入以下有效的帳號資訊:
       | username | password     |
-      | sammy | 1234 |
+      | sammy | 1111 |
       | jimmy | 5678 |
     And 我點擊登入按鈕
     Then 我應該被導向到甘丹查主頁面

@@ -7,11 +7,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -32,7 +35,13 @@ public class BatchNoQuery {
 
   @Before
   public void setup(){
-    driver = new ChromeDriver();
+
+    WebDriverManager.chromedriver().setup();
+    ChromeOptions chromeOptions = new ChromeOptions();
+    chromeOptions.addArguments("--no-sandbox");
+    chromeOptions.addArguments("--headless=new");
+    chromeOptions.addArguments("disable-gpu");
+    driver = new ChromeDriver(chromeOptions);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
